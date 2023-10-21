@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Profile</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <!-- <h1>Friends</h1> -->
+                <a href="./index.html">Friends</a>
+
+                <ul class="nav-menu" id="OpenMenu">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-list">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-list">about</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-list">Contact</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-list">Service</a>
+                    </li>
+                    <div class="serachBar">
+                        <input type="text" name="" id="search-item" placeholder="Search Friends" onkeyup="search()">
+                    </div>
+                </ul>
+
+                <div class="hambugger" id="hambugger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="card">
+            <h1>Angel Priya</h1>
+            <p>@AngelPriya</p>
+            <img src="/image/k.jpg" alt="" id="profile-pic">
+            <label for="input-file">Upload image</label>
+            <input type="file" id="input-file">
+        </div>
+        <div class="followers">
+            <div class="follow">
+                <p>Post</p>
+                <span>6 +</span>
+            </div>
+
+            <div class="follow">
+                <p>Followers</p>
+                <span>100 +</span>
+            </div>
+
+            <div class="follow">
+                <p>Following</p>
+                <span>10 +</span>
+            </div>
+        </div>
+    </div>
+    <div class="post_text">
+        <h2>Post Section</h2>
+    </div>
+    <div class="post_section">
+        <div class="post">
+            <div class="image">
+                <img src="/image/post1.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="image">
+                <img src="/image/post2.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="image">
+                <img src="/image/post3.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="image">
+                <img src="/image/k.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="image">
+                <img src="/image/k1.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="image">
+                <img src="/image/post1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="app.js"></script> -->
+    <script>
+        let profilePic = document.getElementById("profile-pic");
+        let inputFile = document.getElementById("input-file");
+
+        inputFile.onchange = function () {
+            profilePic.src = URL.createObjectURL(inputFile.files[0]);
+
+        }
+
+
+    </script>
+</body>
+
+</html>
